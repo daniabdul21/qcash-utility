@@ -1,0 +1,1 @@
+export declare const getLocalesFromCurrency: (currency: string) => "" | "id-ID" | "en-NZ" | "en-AU" | "en-US" | "en-GB" | "en-CA" | "fr-CH" | "zh-CN" | "ja-JP" | "en-SG" | "en-SA" | "en-HK" | "en-SE" | "en-AE" | "nb-NO" | "es-ES";

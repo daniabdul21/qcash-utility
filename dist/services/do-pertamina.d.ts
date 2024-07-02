@@ -1,0 +1,20 @@
+import { DownloadTransactionTableProps } from "@/types";
+declare const DOPertaminaService: () => {
+    getApplicationId: (module: number) => Promise<any>;
+    getOrderDetail: () => Promise<any>;
+    getMaterialInfo: (idGroupProduct: string) => Promise<any>;
+    getDebitAccList: (companyID: any) => Promise<any>;
+    validateDebitAcc: (params: any) => Promise<any>;
+    simulateTransaction: (params: any, type: string) => Promise<any>;
+    submitTask: (params: any) => Promise<any>;
+    getStatusGroup: (tab: string, filter?: string, query?: string) => Promise<any>;
+    getTaskList: (params: any) => Promise<any>;
+    getTaskDetail: (transactionId: string, tab: any) => Promise<any>;
+    deleteTask: (params: any) => Promise<any>;
+    updateTask: (params: any) => Promise<any>;
+    downloadDataTable: (props: DownloadTransactionTableProps) => Promise<boolean>;
+    getEditTaskData: (transactionId: any) => Promise<any>;
+    downloadReceipt: (params: any) => Promise<boolean>;
+    getFilterData: (params: any) => Promise<any>;
+};
+export default DOPertaminaService;

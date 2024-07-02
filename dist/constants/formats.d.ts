@@ -1,0 +1,11 @@
+export declare const DATE_FORMAT = "DD-MM-YYYY";
+export declare const DATE_HOUR_SLASH_FORMAT = "DD/MM/YYYY HH:mm";
+export declare const DATE_SLASH_FORMAT = "DD/MM/YYYY";
+export declare const DATETIME_FORMAT = "DD-MM-YYYY HH:mm";
+export declare const DATETIME_FORMAT_LOCALE = "L LT";
+export declare const DATETIME_FULL_FORMAT = "DD-MM-YYYY HH:mm:ss";
+export declare const DATETIME_SLASH_FULL_FORMAT = "DD/MM/YYYY HH:mm:ss";
+export declare const TIME_FULL_FORMAT = "HH:mm:ss";
+export declare const YEAR_DATE_FORMAT = "YYYY-MM-DD";
+export declare const YEAR_DATETIME_FORMAT = "YYYY-MM-DD HH:mm";
+export declare const YEAR_DATETIME_FULL_FORMAT = "YYYY-MM-DD HH:mm:ss";

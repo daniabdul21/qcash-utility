@@ -1,0 +1,31 @@
+import { ApiResponse, CustomerDetailResponse, GlobalDownloadBatchTransactionActionPayload, GlobalDownloadBatchTransactionInquiryPayload, GlobalDownloadCustomerDetailPayload, GlobalDownloadDetailTransactionActionPayload, GlobalDownloadDetailTransactionInquiryPayload, GlobalInternalTransferTaskPayload, GlobalInternalTransferTaskResponse, GlobalTransactionActionBatchListPayload, GlobalTransactionActionBatchListResponse, GlobalTransactionActionCriteriaOptionsPayload, GlobalTransactionActionCriteriaOptionsResponse, GlobalTransactionActionDetailListResponse, GlobalTransactionInquiryBatchListPayload, GlobalTransactionInquiryBatchListResponse, GlobalTransactionInquiryCriteriaOptionsPayload, GlobalTransactionInquiryCriteriaOptionsResponse, GlobalTransactionInquiryDetailListPayload, QueryParams } from "@/types";
+declare const UKLNIFTService: () => {
+    getAccountStatementLogs: () => Promise<any>;
+    getTransactionActionDetailList: (params: Partial<QueryParams & GlobalTransactionActionBatchListPayload>) => Promise<ApiResponse<Array<GlobalTransactionActionDetailListResponse>>>;
+    getTransactionActionDetailListV2: (params: any) => Promise<any>;
+    postTransactionActionBatchList: (params: Partial<QueryParams & GlobalTransactionActionBatchListPayload>) => Promise<ApiResponse<Array<GlobalTransactionActionBatchListResponse>>>;
+    getTransactionActionCriteriaOptions: (params: GlobalTransactionActionCriteriaOptionsPayload) => Promise<ApiResponse<GlobalTransactionActionCriteriaOptionsResponse>>;
+    getTransactionInquiryDetailList: (params: Partial<QueryParams & GlobalTransactionInquiryDetailListPayload>) => Promise<ApiResponse<Array<any>>>;
+    postTransactionInquiryBatchList: (params: Partial<QueryParams & GlobalTransactionInquiryBatchListPayload>) => Promise<ApiResponse<Array<GlobalTransactionInquiryBatchListResponse>>>;
+    postTransactionActionBatchListV2: (params: any) => Promise<any>;
+    getTransactionInquiryCriteriaOptions: (params: GlobalTransactionInquiryCriteriaOptionsPayload) => Promise<ApiResponse<GlobalTransactionInquiryCriteriaOptionsResponse>>;
+    getTransactionActionCriteriaOptionsV2: () => Promise<any>;
+    createTaskIFT: (payload: any, rCode: string, companyID?: string, userID?: string) => Promise<any>;
+    postInternalTransferTask: (params: GlobalInternalTransferTaskPayload) => Promise<ApiResponse<Array<GlobalInternalTransferTaskResponse>>>;
+    getDataBeneficiaryAccountUKLN: (params?: any) => Promise<any>;
+    addBeneficiaryAccountUKLN: (params: any) => Promise<any>;
+    getDetailEditUKLN: (batchReffNo: any) => Promise<any>;
+    getAccountDataByRole: (params?: any) => Promise<any>;
+    getCustomerDetail: (batchReffNo: string, customerReffNumber: string) => Promise<ApiResponse<CustomerDetailResponse>>;
+    getDownloadReceipt: (params: GlobalDownloadCustomerDetailPayload) => Promise<void>;
+    getValidateAccessUKLN: (batchReffNo: string) => Promise<any>;
+    validateAccountNumber: (params: any) => Promise<any>;
+    getStatusMapping: (params: {
+        companyId: string;
+    }) => Promise<any>;
+    postDownloadBatchTransactionAction: (params: GlobalDownloadBatchTransactionActionPayload) => Promise<void>;
+    postDownloadBatchTransactionInquiry: (params: GlobalDownloadBatchTransactionInquiryPayload) => Promise<void>;
+    getDownloadDetailTransactionInquiry: (params: GlobalDownloadDetailTransactionInquiryPayload) => Promise<void>;
+    getDownloadDetailTransactionAction: (params: GlobalDownloadDetailTransactionActionPayload) => Promise<void>;
+};
+export default UKLNIFTService;

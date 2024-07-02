@@ -1,0 +1,37 @@
+import { DownloadTransactionTableProps, TaskAction, TaskParams } from "@/types";
+declare const WorkflowService: (baseURL?: string, token?: string | null) => {
+    deleteWorkflowTask: (taskID: string) => Promise<import("axios").AxiosResponse<any, any>>;
+    getWorkflows: () => Promise<any>;
+    getWorkflowTasks: (params: any) => any;
+    getWorkflowTask: (taskID: string) => Promise<any>;
+    getWorkflowTaskMeCreatedBy: () => Promise<any>;
+    getWorkflowTaskMeApprovedBy: () => Promise<any>;
+    postWorkflowTask: (params: any, isDraft: boolean) => Promise<import("axios").AxiosResponse<any, any>>;
+    putWorkflowTask: (taskID: string, params: any, isDraft: boolean) => Promise<import("axios").AxiosResponse<any, any>>;
+    getCompanyLimitByCompanyId: (companyID: string) => Promise<any>;
+    getCompanyLimitByHoldingId: (companyID: string) => Promise<any>;
+    getCompaniesByHoldingId: (companyID: string) => Promise<any>;
+    getMenuLicenses: (companyID: string) => Promise<any>;
+    getProducts: () => Promise<any>;
+    getRolesByCompanyId: (companyID: string) => Promise<any>;
+    getDataUser: (params: any) => Promise<any>;
+    getActivityLogs: (params: any) => Promise<any>;
+    getCompaniesWorkflowByCompanyId: (companyID: string) => Promise<any>;
+    getRoleUsersByCompanyId: (companyID: string, AuthorityLevelID: number, ProductID: string) => Promise<any>;
+    getCurrenciesByModuleId: (companyID: string, features: any[]) => Promise<any>;
+    getDataMenuLicenses: (params: any) => Promise<any>;
+    getSpesificRoleUserByCompanyId: (companyID: string, AuthorityLevelID: number, ProductID: string) => Promise<any>;
+    putTask: (taskId: string, action: TaskAction, reasons?: string, comment?: string) => Promise<any>;
+    getWorkflow: (param: any) => Promise<any>;
+    getAllCompanyWorkflow: (query?: string, limit?: number) => Promise<any>;
+    downloadTableWorkflow: (props: DownloadTransactionTableProps) => Promise<void>;
+    getCompanies: (params?: any) => Promise<any>;
+    getWorkflowTaskV2: (params: TaskParams) => Promise<{
+        data: any;
+        pagination: any;
+    } | undefined>;
+    downloadTableWorkflowV2: (props: DownloadTransactionTableProps) => Promise<void>;
+    putTaskWorkflow: (taskId: string, action: TaskAction, reasons?: string, comment?: string) => Promise<any>;
+    getWorkflowTaskMeCreatedApproved: () => Promise<any>;
+};
+export default WorkflowService;

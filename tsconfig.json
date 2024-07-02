@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "commonjs",
+        "lib": [
+            "dom",
+            "esnext",
+            "dom.iterable"
+        ],
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "sourceMap": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+          "@/*" : ["./*"]
+        }
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules", "dist"
+    ]
+}

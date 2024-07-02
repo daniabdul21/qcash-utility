@@ -1,0 +1,36 @@
+import { DownloadTransactionTableProps } from "@/types";
+declare const CardMerchantService: () => {
+    deleteTransaction: (params: any) => Promise<any>;
+    generateAndBlock: (params: any, path: string) => Promise<any>;
+    getDebitAccList: (companyID: any) => Promise<any>;
+    validateDebitAcc: (payload: any) => Promise<any>;
+    submitRequestCard: (payload: any) => Promise<any>;
+    getCardMerchantList: (params: any) => Promise<any>;
+    getCardMerchantListHistory: (params: any) => Promise<any>;
+    getConfirmationCard: (params: any) => Promise<any>;
+    submitConfirmCard: (payload: any) => Promise<any>;
+    getCardRequestDetail: (transactionId: any, isHistory?: boolean) => Promise<any>;
+    updateRequestCard: (payload: any) => Promise<any>;
+    updateConfirmCard: (payload: any) => Promise<any>;
+    getCardConfirmationDetail: (transactionId: any, isHistory?: boolean) => Promise<any>;
+    downloadCardMerchantList: (props: DownloadTransactionTableProps) => Promise<boolean>;
+    downloadCardMerchantHistory: (props: DownloadTransactionTableProps) => Promise<boolean>;
+    searchCardRelationByNumber: (cardNumber: any, path: string) => Promise<any>;
+    updateTransaction: (payload: any, path: string) => Promise<any>;
+    getFilterData: (params: any, isHistory?: boolean) => Promise<any>;
+    sendCardRelation: (payload: any) => Promise<any>;
+    submitCardRelation: (payload: any) => Promise<import("axios").AxiosResponse<any, any>>;
+    downloadTemplateRelation: (extension: string) => Promise<boolean>;
+    getGeneratePinDetail: (transactionId: any, isHistory?: boolean) => Promise<any>;
+    getCardBlockDetail: (transactionId: any, isHistory?: boolean) => Promise<any>;
+    getCardRelationDetail: (transactionId: any, isHistory?: boolean, params?: any) => Promise<{
+        data: any;
+        detail: any;
+        pagination: any;
+        workflowDoc: any;
+        task: any;
+    }>;
+    downloadCardRelation: (props: DownloadTransactionTableProps) => Promise<boolean>;
+    getCardRelationFilter: (transactionId: string, field: string) => Promise<any>;
+};
+export default CardMerchantService;

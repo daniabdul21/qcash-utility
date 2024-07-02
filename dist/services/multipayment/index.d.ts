@@ -1,0 +1,25 @@
+import { DownloadTransactionTableProps, MPPayloadDownloadMasterFile } from "@/types";
+declare const Multipayment: (companyID: string | null, userID: string | null, billingType?: string, isFromTableHistory?: boolean) => {
+    batch: (batchId: string, data: any) => Promise<any> | null;
+    batches: (isHistory?: boolean) => (data: any) => Promise<any> | null;
+    batchesAction: (data: any) => Promise<any> | null;
+    batchesDownload: (isHistory?: boolean, ids?: string[]) => (props: DownloadTransactionTableProps) => Promise<any>;
+    batchReceipt: (data: any) => Promise<any> | null;
+    billingApproval: (data: any) => Promise<any> | null;
+    billingInquiry: (data: any) => Promise<any> | null;
+    deleteBilling: (data: any) => Promise<any> | null;
+    detailTransaction: (data: any) => Promise<any> | null;
+    downloadInvoice: (data: any) => Promise<any> | null;
+    downloadMasterFile: (data: MPPayloadDownloadMasterFile) => Promise<import("axios").AxiosResponse<any, any>>;
+    downloadTask: (props: DownloadTransactionTableProps) => Promise<any>;
+    downloadTransaction: (batchId?: string, isFromTableHistory?: boolean, fileFormat?: string, type?: string) => Promise<any> | ((props: DownloadTransactionTableProps) => Promise<any> | null) | null;
+    getListSavedBilling: (data: any) => Promise<any> | null;
+    getListTransaction: (data: any) => Promise<any> | null;
+    getSummaryStatus: (props: any) => Promise<any>;
+    products: (data?: any) => Promise<any> | null;
+    saveBilling: (data: any) => Promise<any> | null;
+    submitFile: (data: any) => Promise<any> | null;
+    task: (data: any) => Promise<any> | null;
+    taskDetail: (data: any) => Promise<any> | null;
+};
+export default Multipayment;

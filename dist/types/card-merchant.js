@@ -1,0 +1,40 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CardMerchantStatusText = exports.CardMerchantStatus = void 0;
+var CardMerchantStatus;
+(function (CardMerchantStatus) {
+    CardMerchantStatus[CardMerchantStatus["DRAFT"] = 1] = "DRAFT";
+    CardMerchantStatus[CardMerchantStatus["ON_CHECKER"] = 2] = "ON_CHECKER";
+    CardMerchantStatus[CardMerchantStatus["ON_SIGNER"] = 3] = "ON_SIGNER";
+    CardMerchantStatus[CardMerchantStatus["ON_RELEASER"] = 4] = "ON_RELEASER";
+    CardMerchantStatus[CardMerchantStatus["RETURNED"] = 5] = "RETURNED";
+    CardMerchantStatus[CardMerchantStatus["REJECTED"] = 6] = "REJECTED";
+    CardMerchantStatus[CardMerchantStatus["DELETED"] = 7] = "DELETED";
+    CardMerchantStatus[CardMerchantStatus["PENDING"] = 8] = "PENDING";
+    CardMerchantStatus[CardMerchantStatus["PROCESS"] = 9] = "PROCESS";
+    CardMerchantStatus[CardMerchantStatus["SUCCESS"] = 10] = "SUCCESS";
+    CardMerchantStatus[CardMerchantStatus["FAILED"] = 11] = "FAILED";
+    CardMerchantStatus[CardMerchantStatus["WAITING"] = 12] = "WAITING";
+    CardMerchantStatus[CardMerchantStatus["FILE_IN_PROCESS"] = 13] = "FILE_IN_PROCESS";
+    CardMerchantStatus[CardMerchantStatus["FILE_INVALID"] = 14] = "FILE_INVALID";
+    CardMerchantStatus[CardMerchantStatus["READY_TO_SUBMIT"] = 15] = "READY_TO_SUBMIT";
+})(CardMerchantStatus || (exports.CardMerchantStatus = CardMerchantStatus = {}));
+var CardMerchantStatusText;
+(function (CardMerchantStatusText) {
+    CardMerchantStatusText["DRAFT"] = "Draft";
+    CardMerchantStatusText["ON_CHECKER"] = "On Checker";
+    CardMerchantStatusText["ON_SIGNER"] = "On Signer";
+    CardMerchantStatusText["ON_RELEASER"] = "On Releaser";
+    CardMerchantStatusText["RETURNED"] = "Returned";
+    CardMerchantStatusText["REJECTED"] = "Rejected";
+    CardMerchantStatusText["DELETED"] = "Deleted";
+    CardMerchantStatusText["PENDING"] = "Pending";
+    CardMerchantStatusText["PROCESS"] = "Process";
+    CardMerchantStatusText["SUCCESS"] = "Success";
+    CardMerchantStatusText["FAILED"] = "Failed";
+    CardMerchantStatusText["WAITING"] = "Waiting";
+    CardMerchantStatusText["FILE_IN_PROCESS"] = "File In Process";
+    CardMerchantStatusText["FILE_INVALID"] = "File Invalid";
+    CardMerchantStatusText["READY_TO_SUBMIT"] = "Ready To Submit";
+})(CardMerchantStatusText || (exports.CardMerchantStatusText = CardMerchantStatusText = {}));
+//# sourceMappingURL=card-merchant.js.map

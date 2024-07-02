@@ -1,0 +1,31 @@
+import { TransactionActionEnum } from "@/types";
+declare const NotionalPoolingServices: (baseURL?: string, token?: string | null, companyID?: any, userID?: any, groupID?: any, userType?: any, isDone?: boolean, taskID?: any) => {
+    approvalNotpool: (taskId: string, action: TransactionActionEnum, type?: string, reasons?: string, comment?: string) => Promise<any>;
+    approvalNotpoolCU: (taskId: string, action: TransactionActionEnum, type?: string, reasons?: string, comment?: string, passcode?: string, isToken?: boolean) => Promise<any>;
+    createNotpol: (data: any) => Promise<any>;
+    CreateSignature: (params: any, companyID: any, userID: any, key: any) => string;
+    deleteNotpool: (taskID: string) => Promise<any>;
+    getAccountData: (params: any) => Promise<any>;
+    getDetailNotpool: (data: any) => Promise<any>;
+    getListCompany: () => Promise<any>;
+    getListNotpool: (data: any) => Promise<any>;
+    getListRate: (currenrcy: any) => Promise<any>;
+    getMembers: (data: any) => Promise<any>;
+    listBranch: (params: any) => Promise<any>;
+    postValidateAccount: ({ accountNo, remark, countryCode, type, }: {
+        accountNo: string;
+        remark?: string;
+        countryCode?: string;
+        type: string;
+    }) => Promise<import("axios").AxiosResponse<any, any>>;
+    bulkApprovalNotpool: (data: any) => Promise<import("axios").AxiosResponse<any, any> | undefined>;
+    downloadTable: (props: any) => Promise<void>;
+    saveMember: (data: any) => Promise<any>;
+    getCheckBalance: (params: any) => Promise<any>;
+    getListReport: (data: any) => Promise<any>;
+    generateReport: (data: any) => Promise<any>;
+    getStatusReport: (data: any) => Promise<any>;
+    cancelReport: (data: any) => Promise<any>;
+    downloadReport: (data: any) => Promise<import("axios").AxiosResponse<any, any>>;
+};
+export default NotionalPoolingServices;
